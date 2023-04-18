@@ -9,9 +9,7 @@
 
 export default function Item(props) {
     return (
-      <>
-          // 🚩
-      </>
+      <li onClick={() => {props.seleccionar(props.texto)}}> {props.texto} </li>
     );
   }
   

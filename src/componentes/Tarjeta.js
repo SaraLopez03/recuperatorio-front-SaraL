@@ -1,3 +1,4 @@
+import Item from './Item'
 const listadoPlataformas = ["Twitter", "Facebook", "Youtube"];
 
 // CONSIGNAS EN TARJETA:
@@ -14,7 +15,11 @@ const listadoPlataformas = ["Twitter", "Facebook", "Youtube"];
 export default function Tarjeta(props) {
   return (
     <ul>
-      {/* 🚩 Implementar acá */}
+      {
+        listadoPlataformas.map((plataforma, index) => {
+          return <Item key = {index} texto = {plataforma} seleccionar = {props.seleccionar}/>
+        })
+      }
     </ul>
   );
 }
